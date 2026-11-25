@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Room | Kavin &amp; Keen</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="script.js"></script>
+</head>
+<body><main>
+<header><div><p class="eyebrow">SMART ROOM / IOT</p><h1>Kavin &amp; Keen</h1><p class="muted">Temperature &amp; humidity monitoring</p></div><button id="logout" hidden>Sign out</button></header>
+<section id="login" class="panel login"><h2>Sign in</h2><p class="muted">Use your monitoring account.</p><form id="loginForm"><label for="email">Email</label><input id="email" type="email" autocomplete="username" required><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required><button id="signIn" type="submit">Sign in</button><p id="loginError" role="alert"></p></form></section>
+<section id="dashboard" hidden><div class="statusline"><h2>Room conditions</h2><span id="status" class="status" role="status">Waiting for data</span></div><div class="cards"><article class="panel temp"><span class="eyebrow">TEMPERATURE</span><p class="reading"><span id="temperature">—</span><small>°C</small></p><p class="muted">Room temperature</p></article><article class="panel hum"><span class="eyebrow">HUMIDITY</span><p class="reading"><span id="humidity">—</span><small>%</small></p><p class="muted">Relative humidity</p></article></div><section class="panel info"><h2>Device information</h2><dl><div><dt>Device</dt><dd>ESP32 / DHT11</dd></div><div><dt>Database</dt><dd>Firebase Realtime Database</dd></div><div><dt>Update interval</dt><dd>10 seconds</dd></div><div><dt>Last measurement</dt><dd id="lastUpdate">—</dd></div></dl><p id="dataError" role="alert"></p></section></section>
+<footer>Smart Room · Kavin &amp; Keen</footer></main></body></html>
